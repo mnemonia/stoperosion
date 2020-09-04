@@ -1,0 +1,46 @@
+:host {
+  .map-control-container {
+    position: absolute;
+    z-index: 10;
+    left: 90vw;
+  }
+  .swissMap2 {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+  }
+  .locate {
+    top: 40vh;
+    left: 80vw;
+  }
+  .zoom_plus {
+    top: 2vh;
+    left: 80vw;
+  }
+  .zoom_minus {
+    top: 8vh;
+    left: 80vw;
+  }
+  .frame_buildings {
+    top: 28vh;
+    left: 80vw;
+  }
+  .swissimage_control {
+    top: 34vh;
+    left: 80vw;
+  }
+  .map-control-button {
+    font-size: 0.8em;
+    //margin-left: 0px;
+    padding-left: 0px;
+    --padding-start: 0.3em;
+    --padding-end: 0.3em;
+    --padding-top: 0.3em;
+    --padding-bottom: 0.3em;
+    max-width: 3.5em;
+  }
+  .map-control-toolbar {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,129 @@
+<ion-grid class="map-control-container">
+  <ion-row>
+    <ion-col size="1"  class="ion-no-margin ion-no-padding">
+      <ion-grid class="ion-no-margin ion-no-padding">
+        <ion-row>
+          <ion-col class="ion-no-margin ion-no-padding">
+            <div #mapZoomPlusX name="mapZoomPlusX" id="mapZoomPlusX" >
+              <ion-button size="small" title="Plus" class="map-control-button" (click)="zoom('plus')"><ion-icon name="add-outline"></ion-icon></ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row  class="map-control-toolbar">
+          <ion-col class="ion-no-margin ion-no-padding">
+            <div #mapZoomMinusX name="mapZoomMinusX" id="mapZoomMinusX">
+              <ion-button size="small" title="Minus" class="map-control-button" (click)="zoom('minus')" (mousedown)="zoom('minus')"><ion-icon name="remove-outline"></ion-icon></ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row  class="map-control-toolbar">
+          <ion-col class="ion-no-margin ion-no-padding">
+            &nbsp;
+          </ion-col>
+        </ion-row>
+        <ion-row  class="map-control-toolbar">
+          <ion-col class="ion-no-margin ion-no-padding">
+            &nbsp;
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-row>
+            <ion-col class="ion-no-margin ion-no-padding">
+              <div #frameAllBuildingsControlX name="frameAllBuildingsControlX" id="frameAllBuildingsControlX">
+                <ion-button size="small" class="map-control-button" title="Frame" (click)="frameAllBuildings($event)"><ion-icon name="eye-outline"></ion-icon></ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-col class="ion-no-margin ion-no-padding">
+            <div #geolocationControlX name="geolocationControlX" id="geolocationControlX">
+              <ion-button size="small" title="Locate me" class="map-control-button" (click)="locateMe($event)"><ion-icon name="locate-outline"></ion-icon></ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row  class="map-control-toolbar">
+          <ion-col class="ion-no-margin ion-no-padding">
+            &nbsp;
+          </ion-col>
+        </ion-row>
+        <ion-row  class="map-control-toolbar">
+          <ion-col class="ion-no-margin ion-no-padding">
+            &nbsp;
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-no-margin ion-no-padding">
+            <div #toggleSwissimageControlX name="toggleSwissimageControlX" id="toggleSwissimageControlX">
+              <ion-button [color]="swissImageControlColor" class="map-control-button" size="small" title="Satellite" (click)="toggleSwissimage($event)"><ion-icon name="globe-outline"></ion-icon></ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<div #swissMap2 name="swissMap2" id="swissMap2" class="swissMap2"></div>
+
+
+<!-- ion-grid>
+    <ion-row>
+        <ion-col size="11">
+            <div #swissMap2 name="swissMap2" id="swissMap2" class="swissMap2"></div>
+        </ion-col>
+        <ion-col size="1"  class="ion-no-margin ion-no-padding">
+            <ion-grid class="ion-no-margin ion-no-padding">
+                <ion-row>
+                    <ion-col class="ion-no-margin ion-no-padding">
+                        <div #mapZoomPlusX name="mapZoomPlusX" id="mapZoomPlusX" >
+                            <ion-button size="small" title="Plus" class="map-control-button" (click)="zoom('plus')"><ion-icon name="add-outline"></ion-icon></ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row  class="map-control-toolbar">
+                    <ion-col class="ion-no-margin ion-no-padding">
+                        <div #mapZoomMinusX name="mapZoomMinusX" id="mapZoomMinusX">
+                            <ion-button size="small" title="Minus" class="map-control-button" (click)="zoom('minus')" (mousedown)="zoom('minus')"><ion-icon name="remove-outline"></ion-icon></ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="ion-no-margin ion-no-padding">
+                        <div #geolocationControlX name="geolocationControlX" id="geolocationControlX">
+                            <ion-button size="small" title="Locate me" class="map-control-button" (click)="locateMe($event)"><ion-icon name="locate-outline"></ion-icon></ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="ion-no-margin ion-no-padding">
+                        <div #toggleSwissimageControlX name="toggleSwissimageControlX" id="toggleSwissimageControlX">
+                            <ion-button [color]="swissImageControlColor" class="map-control-button" size="small" title="Satellite" (click)="toggleSwissimage($event)"><ion-icon name="globe-outline"></ion-icon></ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="ion-no-margin ion-no-padding">
+                        <div #frameAllBuildingsControlX name="frameAllBuildingsControlX" id="frameAllBuildingsControlX">
+                            <ion-button size="small" class="map-control-button" title="Frame" (click)="frameAllBuildings($event)"><ion-icon name="eye-outline"></ion-icon></ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-col>
+    </ion-row>
+</ion-grid -->
+<!--
+<div #mapZoomPlus name="mapZoomPlus" id="mapZoomPlus" class="zoom_plus rotate-north ol-unselectable ol-control">
+    <ion-button size="small" title="Plus" (click)="zoom('plus')"><ion-icon name="add-outline"></ion-icon></ion-button>
+</div>
+<div #mapZoomMinus name="mapZoomMinus" id="mapZoomMinus" class="zoom_minus rotate-north ol-unselectable ol-control">
+    <ion-button size="small" title="Plus" (click)="zoom('minus')" (mousedown)="zoom('minus')"><ion-icon name="remove-outline"></ion-icon></ion-button>
+</div>
+<div #geolocationControl name="geolocationControl" id="geolocationControl" class="locate rotate-north ol-unselectable ol-control">
+    <ion-button size="small" title="Locate me" (click)="locateMe($event)"><ion-icon name="locate-outline"></ion-icon></ion-button>
+</div>
+<div #toggleSwissimageControl name="toggleSwissimageControl" id="toggleSwissimageControl" class="swissimage_control rotate-north ol-unselectable ol-control">
+    <ion-button [color]="swissImageControlColor" size="small" title="Satellite" (click)="toggleSwissimage($event)"><ion-icon name="globe-outline"></ion-icon></ion-button>
+</div>
+<div #frameAllBuildingsControl name="frameAllBuildingsControl" id="frameAllBuildingsControl" class="frame_buildings rotate-north ol-unselectable ol-control">
+    <ion-button size="small" title="Frame" (click)="frameAllBuildings($event)"><ion-icon name="eye-outline"></ion-icon></ion-button>
+</div>
+-->
