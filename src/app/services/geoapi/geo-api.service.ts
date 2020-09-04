@@ -10,7 +10,7 @@ export class GeoApiService {
   private imageDisplayHeight = 360; // px
   private imageDisplayWidth = 1024; // px
   private imageDisplayResolution = 96; // dpi
-  private URL = '//api.geo.admin.ch';
+  private URL = '//geoadmin.stoperosion.ch'; //'//api.geo.admin.ch';
   private IDENTIFY_PATH = '/rest/services/api/MapServer/identify';
   private QUERY_PARAMS = '?geometryType=esriGeometryPoint&geometryFormat=esrijson&tolerance=1&order=distance&returnGeometry=true&layers=all:ch.bfe.solarenergie-eignung-daecher&lang=de&sr=2056';//mapExtent=2724878.382441501,1210388.528680723,2724977.382441501,1210423.528680723&tolerance=10&sr=2056&layers=all:ch.swisstopo.fixpunkte-agnes,ch.bfe.solarenergie-eignung-daecher&lang=de&callback=olc_824';
 

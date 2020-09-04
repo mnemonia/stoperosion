@@ -9,7 +9,9 @@ import {LawisService} from '../services/lawis/lawis.service';
 })
 export class MapPage implements OnInit {
   public mapData = {};
+  public mapCenter = [2649846.329, 1229746.222];
   public mapEvent;
+  public btrNr = 'LU3636';
 
   constructor(private geoApiService: GeoApiService, private lawisService: LawisService) { }
 
@@ -20,7 +22,7 @@ export class MapPage implements OnInit {
   public onMapEvent($event) {
     console.log('onMapEvent', $event);
     this.mapEvent = $event;
-    this.lawisService.getBewirtschaftungsflaechen().subscribe(
+    this.lawisService.getBewirtschaftungsflaechen2().subscribe(
         (res) => {
             console.info('info', res);
         },
@@ -29,12 +31,12 @@ export class MapPage implements OnInit {
         },
         () => {}
     );
-    this.geoApiService.identify($event).subscribe(
+    /* this.geoApiService.identify($event).subscribe(
         (res: any) => {
           console.log('resultat', res);
           if (res === undefined || res.attributes === undefined) {
             return;
           }
-        });
+        }); */
   }
 }

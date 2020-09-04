@@ -23,15 +23,15 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-    //private translate: TranslateService
+    private statusBar: StatusBar,
+    private translate: TranslateService
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
-    //this.translate.setDefaultLang('de');
-    //this.translate.use('de');
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
 
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
