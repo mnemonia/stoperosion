@@ -16,6 +16,7 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {CompsModule} from './comps/comps.module';
 import {GeoApiService} from './services/geoapi/geo-api.service';
 import {LawisService} from './services/lawis/lawis.service';
+import {SettingsService} from './services/settings/settings.service';
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClient,
       GeoApiService,
       LawisService,
+      SettingsService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],

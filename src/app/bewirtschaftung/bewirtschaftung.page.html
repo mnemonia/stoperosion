@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'ui.bewirtschaftung' | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/map"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>Bewertung</ion-label>
+      <ion-icon color="success" name="thumbs-up-outline"></ion-icon>
+      <!-- ion-icon color="danger" name="thumbs-down-outline"></ion-icon -->
+      <!-- ion-icon color="warning" name="hand-right-outline"></ion-icon -->
+    </ion-item>
+  </ion-list>
+
+  <ion-segment (ionChange)="segmentChanged($event)" [value]="currentSegment">
+    <ion-segment-button value="y1">
+      <ion-label>Jahr 1&nbsp;<!-- ion-icon color="warning" name="alert-circle-outline"></ion-icon --></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="y2">
+      <ion-label>Jahr 2</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="y3">
+      <ion-label>Jahr 3&nbsp;<!-- ion-icon color="danger" name="alert-circle-outline"></ion-icon --></ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="y4">
+      <ion-label>Jahr 4</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ng-container *ngIf="currentSegment === 'y1'">
+    <ion-list>
+    <ion-list-header>Hauptnutzung</ion-list-header>
+    <ion-item>
+      <ion-label>Kultur</ion-label>
+      <ion-select>
+        <ion-select-option *ngFor="let kultur of kulturen">{{kultur.label}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bodenbearbeitung</ion-label>
+      <ion-select>
+        <ion-select-option *ngFor="let bb of bodenbearbeitung">{{bb.label}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+    <ion-list>
+      <ion-list-header>Zwischennutzung</ion-list-header>
+      <ion-item>
+        <ion-label>Kultur</ion-label>
+        <ion-select>
+          <ion-select-option *ngFor="let kultur of kulturen">{{kultur.label}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Bodenbearbeitung</ion-label>
+        <ion-select>
+          <ion-select-option *ngFor="let bb of bodenbearbeitung">{{bb.label}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+</ion-content>

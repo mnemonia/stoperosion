@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Karte',
       url: '/map',
-      icon: 'mail'
+      icon: 'map'
     }
   ];
 

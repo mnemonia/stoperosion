@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'bewirtschaftung',
+    loadChildren: () => import('./bewirtschaftung/bewirtschaftung.module').then( m => m.BewirtschaftungPageModule)
   }
 ];
 

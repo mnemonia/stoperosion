@@ -8,6 +8,16 @@
 </ion-header>
 
 <ion-content>
-<app-map [mapData]="mapData" [mapCenter]="mapCenter" (onMapEvent)="onMapEvent($event)">
+  <ion-segment (ionChange)="segmentChanged($event)" [value]="area">
+    <ion-segment-button value="be">
+      <ion-label>Bewirtschaftungseinheit</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="nf">
+      <ion-label>Nutzungsfläche</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <app-map [mapData]="mapData" [mapCenter]="mapCenter" [areaGeoJson]="area_area"
+           [areaColor]="color" (onMapEvent)="onMapEvent($event)">
 </app-map>
 </ion-content>
