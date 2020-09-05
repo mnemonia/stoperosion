@@ -26,10 +26,16 @@ export class GeoApiService {
     let query = '&mapExtent=' + event.frameState.extent;
     query += '&geometry=' + event.coordinate;
     query += '&imageDisplay=' + [window.innerWidth, this.imageDisplayHeight, this.imageDisplayResolution]; // imageDisplay=990,350,96
-    return this.httpService.get(this.URL + this.IDENTIFY_PATH + this.QUERY_PARAMS + query).pipe(
+    return this.httpService.get(this.URL + this.IDENTIFY_PATH + this.QUERY_PARAMS + query, this.createRequestOptions()).pipe(
         //filter((res: any[]) => res.length > 0),
         map((res: any) => res.results[0])
     );
+  } //
+
+  createRequestOptions(): any {
+    const headers = {};
+    headers['Origin'] = 'https://map.geo.admin.ch/mobile.html';
+    return { headers: headers};
   }
 
 }

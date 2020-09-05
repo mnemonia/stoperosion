@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SettingsPageRoutingModule } from './settings-routing.module';
+import { BeratungPageRoutingModule } from './beratung-routing.module';
 
-import { SettingsPage } from './settings.page';
+import { BeratungPage } from './beratung.page';
 import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {TranslateModule} from '@ngx-translate/core';
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingsPageRoutingModule,
+    BeratungPageRoutingModule,
     TranslateModule.forChild()
   ],
-  declarations: [SettingsPage]
+  declarations: [BeratungPage]
 })
-export class SettingsPageModule {}
+export class BeratungPageModule {}

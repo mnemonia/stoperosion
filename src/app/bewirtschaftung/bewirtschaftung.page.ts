@@ -28,13 +28,15 @@ export class BewirtschaftungPage implements OnInit {
         (err) => {},
         () => {}
     );
-    let kultur = new Kultur('mais', 'Maïs (Silomais)', 1.0);
+    let kultur = new Kultur('mais', 'Mais (Silomais)', 1.0);
     this.kulturen.push(kultur);
     kultur = new Kultur('zuckerrueben', 'Zuckerrüben', 1.0);
     this.kulturen.push(kultur);
     kultur = new Kultur('winterweizen', 'Winterweizen', 1.0);
     this.kulturen.push(kultur);
-    kultur = new Kultur('scharwbrachehw', 'Scharwbrache im Herbst und Winter', 1.0);
+    kultur = new Kultur('scharwbrachehw', 'Scharbrache im Herbst und Winter', 1.0);
+    this.kulturen.push(kultur);
+    kultur = new Kultur('keine', 'Keine', 1.0);
     this.kulturen.push(kultur);
 
     let bb = new Bodenbearbeitung('mulch30', 'über 30% Mulch', 1.0);

@@ -1,6 +1,23 @@
 {
   "ui": {
-    "karte": "Karte",
-    "bewirtschaftung": "Bewirtschaftung"
+    "karte": "Erosionsrisiko",
+    "bewirtschaftung": "Bewirtschaftung",
+    "settings": "Einstellungen",
+    "mysettings": "Meine Einstellungen",
+    "language": "Sprache",
+    "appversion": "Version",
+    "appteam": "Team",
+    "app": "App",
+    "bewirtschaftungseinheit": "Bewirtschaftungseinheit",
+    "nutzungsflaeche": "Nutzungsfläche",
+    "bewertung": "Bewertung der Bewirtschaftung",
+    "jahr": "Jahr",
+    "hauptnutzung": "Hauptnutzung",
+    "kultur": "Kultur",
+    "bodenbearbeitung": "Bodenbearbeitung",
+    "zwischennutzung": "Zwischennutzung",
+    "beratung": "Beratung",
+    "grundlagenzurerosion": "Grundlagen zur Erosion",
+    "logout": "Logout"
   }
 }

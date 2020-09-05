@@ -10,54 +10,62 @@
 <ion-content>
   <ion-list lines="none" class="ion-padding">
     <ion-item>
-      <ion-label>Bewertung</ion-label>
-      <ion-icon color="success" name="thumbs-up-outline"></ion-icon>
-      <!-- ion-icon color="danger" name="thumbs-down-outline"></ion-icon -->
-      <!-- ion-icon color="warning" name="hand-right-outline"></ion-icon -->
+      <ion-label class="bewertung_label">{{'ui.bewertung' | translate }}</ion-label>
+      <ion-icon class="bewertung_icon" color="success" name="thumbs-up-outline"></ion-icon>
+      <!-- ion-icon class="bewertung_icon" color="danger" name="thumbs-down-outline"></ion-icon -->
+      <!-- ion-icon class="bewertung_icon" color="warning" name="hand-right-outline"></ion-icon -->
+    </ion-item>
+    <ion-item>
+      <ion-label>Bodenabtrag</ion-label>
+      <ion-text>< 2t pro Hektare pro Jahr</ion-text>
+      <!-- ion-text>8 t pro Hektare pro Jahr</ion-text -->
+    </ion-item>
+    <ion-item routerLink="/beratung" detail="true">
+      <ion-label>Beratung</ion-label>
     </ion-item>
   </ion-list>
 
   <ion-segment (ionChange)="segmentChanged($event)" [value]="currentSegment" class="ion-padding">
     <ion-segment-button value="y1">
-      <ion-label>Jahr 1&nbsp;<!-- ion-icon color="warning" name="alert-circle-outline"></ion-icon --></ion-label>
+      <ion-label>{{'ui.jahr' | translate }} 1&nbsp;<!-- ion-icon color="warning" name="alert-circle-outline"></ion-icon --></ion-label>
     </ion-segment-button>
     <ion-segment-button value="y2">
-      <ion-label>Jahr 2</ion-label>
+      <ion-label>{{'ui.jahr' | translate }} 2</ion-label>
     </ion-segment-button>
     <ion-segment-button value="y3">
-      <ion-label>Jahr 3&nbsp;<!-- ion-icon color="danger" name="alert-circle-outline"></ion-icon --></ion-label>
+      <ion-label>{{'ui.jahr' | translate }} 3&nbsp;<!-- ion-icon color="danger" name="alert-circle-outline"></ion-icon --></ion-label>
     </ion-segment-button>
     <ion-segment-button value="y4">
-      <ion-label>Jahr 4</ion-label>
+      <ion-label>{{'ui.jahr' | translate }} 4</ion-label>
     </ion-segment-button>
   </ion-segment>
 
   <ng-container *ngIf="currentSegment === 'y1'">
     <ion-list class="ion-padding">
-    <ion-list-header>Hauptnutzung</ion-list-header>
+    <ion-list-header>{{'ui.hauptnutzung' | translate }}</ion-list-header>
     <ion-item>
-      <ion-label position="stacked">Kultur</ion-label>
+      <ion-label position="stacked">{{'ui.kultur' | translate }}</ion-label>
       <ion-select class="select_option">
         <ion-select-option *ngFor="let kultur of kulturen">{{kultur.label}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Bodenbearbeitung</ion-label>
+      <ion-label position="stacked">{{'ui.bodenbearbeitung' | translate }}</ion-label>
       <ion-select class="select_option">
         <ion-select-option *ngFor="let bb of bodenbearbeitung">{{bb.label}}</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>
     <ion-list class="ion-padding">
-      <ion-list-header>Zwischennutzung</ion-list-header>
+      <ion-list-header>{{'ui.zwischennutzung' | translate }}</ion-list-header>
       <ion-item>
-        <ion-label position="stacked">Kultur</ion-label>
+        <ion-label position="stacked">{{'ui.kultur' | translate }}</ion-label>
         <ion-select class="select_option">
           <ion-select-option *ngFor="let kultur of kulturen">{{kultur.label}}</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Bodenbearbeitung</ion-label>
+        <ion-label position="stacked">{{'ui.bodenbearbeitung' | translate }}</ion-label>
         <ion-select class="select_option">
           <ion-select-option *ngFor="let bb of bodenbearbeitung">{{bb.label}}</ion-select-option>
         </ion-select>

@@ -4,12 +4,12 @@ export class User {
     BTR_NR: string;
 }
 export class Kultur  {
-    id: string;
+    KUL_ID: string;
     label: string;
     factor: number;
     constructor(id, label, factor) {
         this.factor = factor;
-        this.id = id;
+        this.KUL_ID = id;
         this.label = label;
     }
 }

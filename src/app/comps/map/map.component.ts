@@ -26,6 +26,9 @@ export class MapComponent implements OnInit {
   private _mapCenter = [2646940.72, 1226832.61]; // E=&N=
   private geojsonObject;
   private vectorLayer;
+  private _labels;
+  private _areaColor;
+  private _areaFillColor = 'rgba(207,52,235,0.5)';
 
   @Output() onMapEvent = new EventEmitter();
   @Output() onMapMoveEvent = new EventEmitter();
@@ -81,13 +84,31 @@ export class MapComponent implements OnInit {
 
   @Input()
   set areaColor(color: string) {
-    console.log(color);
+    this._areaColor = color;
     this.areaStyle = new ol.style.Style({
       fill: new ol.style.Fill({
-        color: 'rgba(29,187,255,0.3)'
+        //color: 'rgba(29,187,255,0.3)'
+        color: this._areaFillColor
       }),
       stroke: new ol.style.Stroke({
-        color: color,
+        color: this._areaColor,
+        width: 2.5
+      })
+    });
+    if (this.vectorLayer) {
+      this.removeGeojaonLayer();
+      this.addGeojaonLayer();
+    }
+  }
+  @Input()
+  set areaFillColor(color: string) {
+    this._areaFillColor = color;
+    this.areaStyle = new ol.style.Style({
+      fill: new ol.style.Fill({
+        color: this._areaFillColor
+      }),
+      stroke: new ol.style.Stroke({
+        color: this._areaColor,
         width: 2.5
       })
     });
@@ -113,6 +134,28 @@ export class MapComponent implements OnInit {
     return this.geojsonObject;
   }
 
+  @Input()
+  set labels(lbls: any[]) {
+    this._labels = lbls;
+  }
+  get labels() {
+    return this._labels;
+  }
+
+  private addLabels() {
+/*    const polygon = new ol.geom.Polygon(rings);
+    const vectorLayer = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        features: [new ol.Feature({
+          geometry: polygon
+        })]
+      }),
+      style: this.areaStyle
+    });
+    this.mapObject.addLayer(vectorLayer);
+    this.currentLayer = vectorLayer;
+    this.mapObject.renderSync(); */
+  }
 
 
   private addDataToSolarRoofLayer(rings: any[], bbox) {

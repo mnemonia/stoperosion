@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Settings</ion-title>
+    <ion-title>{{'ui.settings' | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<ion-list>
+  <ion-list-header>{{'ui.mysettings' | translate}}</ion-list-header>
+  <ion-item>
+    <ion-label>{{'ui.language' | translate}}</ion-label>
+    <ion-select (ionChange)="changeLanguage($event)">
+      <ion-select-option>DE</ion-select-option>
+      <ion-select-option>FR</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+  <ion-list>
+    <ion-list-header>{{'ui.app' | translate}}</ion-list-header>
+    <ion-item>
+      <ion-label>{{'ui.appversion' | translate}}</ion-label>
+      <ion-text class="select_option">0.2.26eccbb</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{'ui.appteam' | translate}}</ion-label>
+      <ion-text class="select_option">Camille Rubeaud, Markus Gusset, Hubert Schürmann, Nils Birkeland</ion-text>
+    </ion-item>
+  </ion-list>
 </ion-content>

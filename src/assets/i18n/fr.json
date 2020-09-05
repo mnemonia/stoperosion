@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "karte": "Carte",
+    "bewirtschaftung": "La gestion",
+    "settings": "Paramètres",
+    "mysettings": "Mes paramètres",
+    "language": "Langue",
+    "appversion": "Version",
+    "appteam": "Equipe",
+    "app": "App",
+    "bewirtschaftungseinheit": "Unité de gestion",
+    "nutzungsflaeche": "Surface utilisable",
+    "bewertung": "Evaluation",
+    "jahr": "An",
+    "hauptnutzung": "Utilisation principale",
+    "kultur": "Culture",
+    "bodenbearbeitung": "Labour",
+    "zwischennutzung": "Utilisation provisoire",
+    "beratung": "Beratung"
+  }
+}

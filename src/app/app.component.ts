@@ -14,9 +14,19 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Karte',
+      title: 'ui.karte',
       url: '/map',
       icon: 'map'
+    },
+    {
+      title: 'ui.grundlagenzurerosion',
+      url: '/map',
+      icon: 'information-circle'
+    },
+    {
+      title: 'ui.logout',
+      url: '/map',
+      icon: 'log-out'
     }
   ];
 

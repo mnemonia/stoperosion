@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'bewirtschaftung',
     loadChildren: () => import('./bewirtschaftung/bewirtschaftung.module').then( m => m.BewirtschaftungPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'beratung',
+    loadChildren: () => import('./beratung/beratung.module').then( m => m.BeratungPageModule)
   }
 ];
 
