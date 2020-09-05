@@ -27,7 +27,7 @@ export class MapPage implements OnInit {
 
   ngOnInit() {
     this.mapData = {'geometry': {'rings': []}};
-    this.settingsService.getBewirtschaftungseinheiten().subscribe(
+    this.settingsService.getBewirtschaftungseinheiten(this.settingsService.getUser()).subscribe(
         (bwes) => {
           bwes.forEach(
               bwe => {

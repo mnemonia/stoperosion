@@ -47,7 +47,7 @@ export class BodenbearbeitungProJahr {
 }
 export class Nutzungsflaeche {
     kultur_pro_jahr: KulturProJahr[];
-    bodenbearbeitung_pro_jahr: Bodenbearbeitung[];
+    bodenbearbeitung_pro_jahr: BodenbearbeitungProJahr[];
 
     constructor() {
         this.kultur_pro_jahr = [];
