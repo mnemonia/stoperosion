@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none">
+  <ion-list lines="none" class="ion-padding">
     <ion-item>
       <ion-label>Bewertung</ion-label>
       <ion-icon color="success" name="thumbs-up-outline"></ion-icon>
@@ -17,7 +17,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-segment (ionChange)="segmentChanged($event)" [value]="currentSegment">
+  <ion-segment (ionChange)="segmentChanged($event)" [value]="currentSegment" class="ion-padding">
     <ion-segment-button value="y1">
       <ion-label>Jahr 1&nbsp;<!-- ion-icon color="warning" name="alert-circle-outline"></ion-icon --></ion-label>
     </ion-segment-button>
@@ -33,7 +33,7 @@
   </ion-segment>
 
   <ng-container *ngIf="currentSegment === 'y1'">
-    <ion-list>
+    <ion-list class="ion-padding">
     <ion-list-header>Hauptnutzung</ion-list-header>
     <ion-item>
       <ion-label>Kultur</ion-label>
@@ -48,7 +48,7 @@
       </ion-select>
     </ion-item>
   </ion-list>
-    <ion-list>
+    <ion-list class="ion-padding">
       <ion-list-header>Zwischennutzung</ion-list-header>
       <ion-item>
         <ion-label>Kultur</ion-label>

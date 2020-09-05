@@ -8,7 +8,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-segment (ionChange)="segmentChanged($event)" [value]="area">
+
+  <ion-segment (ionChange)="segmentChanged($event)" [value]="area" class="ion-padding">
     <ion-segment-button value="be">
       <ion-label>Bewirtschaftungseinheit</ion-label>
     </ion-segment-button>
@@ -20,4 +21,6 @@
   <app-map [mapData]="mapData" [mapCenter]="mapCenter" [areaGeoJson]="area_area"
            [areaColor]="color" (onMapEvent)="onMapEvent($event)">
 </app-map>
+
+
 </ion-content>
