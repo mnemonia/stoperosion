@@ -36,14 +36,14 @@
     <ion-list class="ion-padding">
     <ion-list-header>Hauptnutzung</ion-list-header>
     <ion-item>
-      <ion-label>Kultur</ion-label>
-      <ion-select>
+      <ion-label position="stacked">Kultur</ion-label>
+      <ion-select class="select_option">
         <ion-select-option *ngFor="let kultur of kulturen">{{kultur.label}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label>Bodenbearbeitung</ion-label>
-      <ion-select>
+      <ion-label position="stacked">Bodenbearbeitung</ion-label>
+      <ion-select class="select_option">
         <ion-select-option *ngFor="let bb of bodenbearbeitung">{{bb.label}}</ion-select-option>
       </ion-select>
     </ion-item>
@@ -51,14 +51,14 @@
     <ion-list class="ion-padding">
       <ion-list-header>Zwischennutzung</ion-list-header>
       <ion-item>
-        <ion-label>Kultur</ion-label>
-        <ion-select>
+        <ion-label position="stacked">Kultur</ion-label>
+        <ion-select class="select_option">
           <ion-select-option *ngFor="let kultur of kulturen">{{kultur.label}}</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label>Bodenbearbeitung</ion-label>
-        <ion-select>
+        <ion-label position="stacked">Bodenbearbeitung</ion-label>
+        <ion-select class="select_option">
           <ion-select-option *ngFor="let bb of bodenbearbeitung">{{bb.label}}</ion-select-option>
         </ion-select>
       </ion-item>
