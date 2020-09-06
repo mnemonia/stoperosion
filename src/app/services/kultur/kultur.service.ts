@@ -11,11 +11,11 @@ export class KulturService {
   constructor() {
     let kultur = new Kultur('mais', 'Mais (Silomais)', 1.0);
     this.kulturen.push(kultur);
-    kultur = new Kultur('zuckerrueben', 'Zuckerrüben', 1.0);
+    kultur = new Kultur('zuckerrueben', 'Zuckerrüben', 0.5);
     this.kulturen.push(kultur);
-    kultur = new Kultur('winterweizen', 'Winterweizen', 1.0);
+    kultur = new Kultur('winterweizen', 'Winterweizen', 0.1);
     this.kulturen.push(kultur);
-    kultur = new Kultur('scharwbrachehw', 'Scharbrache im Herbst und Winter', 1.0);
+    kultur = new Kultur('scharwbrachehw', 'Schwarzbrache im Herbst und Winter', 0.9);
     this.kulturen.push(kultur);
     kultur = new Kultur('keine', 'Keine', 1.0);
     this.kulturen.push(kultur);

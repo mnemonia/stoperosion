@@ -54,7 +54,7 @@ export class MapPage implements OnInit {
   public onMapEvent($event) {
     console.log('onMapEvent', $event);
     this.mapEvent = $event;
-    this.nav.navigateForward('bewirtschaftung');
+    this.nav.navigateForward('bewirtschaftung/nutzungsflaeche');
     /* this.lawisService.getBewirtschaftungsflaechen2().subscribe(
         (res) => {
             console.info('info', res);

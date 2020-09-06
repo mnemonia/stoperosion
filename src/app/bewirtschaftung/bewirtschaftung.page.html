@@ -11,36 +11,74 @@
   <ion-list lines="none" class="ion-padding">
     <ion-item>
       <ion-label class="bewertung_label">{{'ui.bewertung' | translate }}</ion-label>
-      <ion-icon class="bewertung_icon" color="success" name="thumbs-up-outline"></ion-icon>
-      <!-- ion-icon class="bewertung_icon" color="danger" name="thumbs-down-outline"></ion-icon -->
+      <ion-icon *ngIf="currentCP < cpThreshold" class="bewertung_icon" color="success" name="thumbs-up-outline"></ion-icon>
+      <ion-icon *ngIf="currentCP >= cpThreshold" class="bewertung_icon" color="danger" name="thumbs-down-outline"></ion-icon>
       <!-- ion-icon class="bewertung_icon" color="warning" name="hand-right-outline"></ion-icon -->
     </ion-item>
+    <!-- ion-item>
+      <ion-label>CP</ion-label>
+      <ion-text>{{currentCP}}</ion-text>
+    </ion-item -->
     <ion-item>
       <ion-label>Bodenabtrag</ion-label>
-      <ion-text>< 2t pro Hektare pro Jahr</ion-text>
-      <!-- ion-text>8 t pro Hektare pro Jahr</ion-text -->
+      <ion-text *ngIf="currentCP < cpThreshold">< 2t pro Hektare pro Jahr</ion-text>
+      <ion-text *ngIf="currentCP >= cpThreshold">8 t pro Hektare pro Jahr</ion-text>
     </ion-item>
     <ion-item routerLink="/beratung" detail="true">
       <ion-label>Beratung</ion-label>
     </ion-item>
   </ion-list>
 
-  <ion-segment (ionChange)="segmentChanged($event)" [value]="currentSegment" class="ion-padding">
-    <ion-segment-button value="y1">
-      <ion-label>{{'ui.jahr' | translate }} 1&nbsp;<!-- ion-icon color="warning" name="alert-circle-outline"></ion-icon --></ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="y2">
-      <ion-label>{{'ui.jahr' | translate }} 2</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="y3">
-      <ion-label>{{'ui.jahr' | translate }} 3&nbsp;<!-- ion-icon color="danger" name="alert-circle-outline"></ion-icon --></ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="y4">
-      <ion-label>{{'ui.jahr' | translate }} 4</ion-label>
+  <ion-segment (ionChange)="segmentChanged($event)"
+              [value]="currentJahr"
+              class="ion-padding">
+    <ion-segment-button *ngFor="let bew of bewirtschaftungen" [value]="bew.jahr">
+      <ion-label>{{'ui.jahr' | translate }} {{bew.jahr}}&nbsp;<!-- ion-icon color="warning" name="alert-circle-outline"></ion-icon --></ion-label>
     </ion-segment-button>
   </ion-segment>
 
-  <ng-container *ngIf="currentSegment === 'y1'">
+  <ng-container *ngFor="let bew of bewirtschaftungen">
+    <ng-container *ngIf="bew.jahr === currentJahr">
+      <ion-list class="ion-padding">
+        <ion-list-header>{{'ui.hauptnutzung' | translate }}</ion-list-header>
+        <ion-item>
+          <ion-label position="stacked">{{'ui.kultur' | translate }}</ion-label>
+          <ion-select class="select_option" [value]="bew.hauptnutzungKultur.KUL_ID"
+                      (ionChange)="setHauptnutzungKultur(bew, $event)">
+            <ion-select-option *ngFor="let kultur of kulturen" [value]="kultur.KUL_ID">{{kultur.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item [color]="currentCP > cpThreshold && bew.hauptnutzungBodenbearbeitung.id === 'pflug' ? 'warning' : 'white'">
+          <ion-label position="stacked">{{'ui.bodenbearbeitung' | translate }}</ion-label>
+          <ion-select class="select_option"
+                      (ionChange)="setHauptnutzungBodenbearbeitung(bew, $event)"
+                      [value]="bew.hauptnutzungBodenbearbeitung.id">
+            <ion-select-option *ngFor="let bb of bodenbearbeitungen" [value]="bb.id">{{bb.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list class="ion-padding">
+        <ion-list-header>{{'ui.zwischennutzung' | translate }}</ion-list-header>
+        <ion-item>
+          <ion-label position="stacked">{{'ui.kultur' | translate }}</ion-label>
+          <ion-select class="select_option" [value]="bew.zwischennutzungKultur.KUL_ID"
+                      (ionChange)="setZwischennutzungKultur(bew, $event)">
+            <ion-select-option *ngFor="let kultur of kulturen" [value]="kultur.KUL_ID">{{kultur.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">{{'ui.bodenbearbeitung' | translate }}</ion-label>
+          <ion-select class="select_option"
+                      (ionChange)="setZwischennutzungBodenbearbeitung(bew, $event)"
+                      [value]="bew.zwischennutzungBodenbearbeitung.id">
+            <ion-select-option *ngFor="let bb of bodenbearbeitungen" [value]="bb.id">{{bb.label}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+  </ng-container>
+
+  <!-- ng-container *ngIf="currentSegment === 'y1'">
     <ion-list class="ion-padding">
     <ion-list-header>{{'ui.hauptnutzung' | translate }}</ion-list-header>
     <ion-item>
@@ -71,5 +109,5 @@
         </ion-select>
       </ion-item>
     </ion-list>
-  </ng-container>
+  </ng-container -->
 </ion-content>

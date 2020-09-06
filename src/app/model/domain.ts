@@ -45,14 +45,22 @@ export class BodenbearbeitungProJahr {
     }
 
 }
-export class Nutzungsflaeche {
-    kultur_pro_jahr: KulturProJahr[];
-    bodenbearbeitung_pro_jahr: BodenbearbeitungProJahr[];
+export class BewirtschaftungProJahr {
+    jahr: number;
+    hauptnutzungKultur: Kultur;
+    hauptnutzungBodenbearbeitung: Bodenbearbeitung;
+    zwischennutzungKultur: Kultur;
+    zwischennutzungBodenbearbeitung: Bodenbearbeitung;
 
-    constructor() {
-        this.kultur_pro_jahr = [];
-        this.bodenbearbeitung_pro_jahr = [];
+    constructor(j: number) {
+        this.jahr = j;
     }
+
+}
+export class Nutzungsflaeche {
+    // kultur_pro_jahr: KulturProJahr[];
+    // bodenbearbeitung_pro_jahr: BodenbearbeitungProJahr[];
+    bewirtschaftung_pro_jahr: BewirtschaftungProJahr[];
 
 }
 
@@ -64,4 +72,5 @@ export class Bewirtschaftungseinheit {
     bewirtschaftungsflaechen_area: any;
     nutzungsflaechen_area: any;
 }
+
 

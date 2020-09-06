@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
   {
-    path: 'bewirtschaftung',
+    path: 'bewirtschaftung/:type',
     loadChildren: () => import('./bewirtschaftung/bewirtschaftung.module').then( m => m.BewirtschaftungPageModule)
   },
   {
@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'beratung',
     loadChildren: () => import('./beratung/beratung.module').then( m => m.BeratungPageModule)
+  },
+  {
+    path: 'information',
+    loadChildren: () => import('./information/information.module').then( m => m.InformationPageModule)
   }
 ];
 

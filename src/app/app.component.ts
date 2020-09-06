@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'ui.grundlagenzurerosion',
-      url: '/map',
+      url: '/information',
       icon: 'information-circle'
     },
     {
