@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Bodenbearbeitung, Kultur, Nutzungsflaeche} from '../model/domain';
 import {SettingsService} from '../services/settings/settings.service';
+import {KulturService} from '../services/kultur/kultur.service';
+import {BodenbearbeitungService} from '../services/bodenbearbeitung/bodenbearbeitung.service';
 
 @Component({
   selector: 'app-bewirtschaftung',
@@ -13,7 +15,9 @@ export class BewirtschaftungPage implements OnInit {
   kulturen: Kultur[] = [];
   bodenbearbeitung: Bodenbearbeitung[] = [];
 
-  constructor(private settingsService: SettingsService) { }
+  constructor(private kulturService: KulturService,
+              private bodenbearbeitungService: BodenbearbeitungService,
+              private settingsService: SettingsService) { }
 
   ngOnInit() {
     this.settingsService.getBewirtschaftungseinheiten(this.settingsService.getUser()).subscribe(
@@ -27,27 +31,15 @@ export class BewirtschaftungPage implements OnInit {
         (err) => console.error(err),
         () => {}
     );
-    let kultur = new Kultur('mais', 'Mais (Silomais)', 1.0);
-    this.kulturen.push(kultur);
-    kultur = new Kultur('zuckerrueben', 'Zuckerrüben', 1.0);
-    this.kulturen.push(kultur);
-    kultur = new Kultur('winterweizen', 'Winterweizen', 1.0);
-    this.kulturen.push(kultur);
-    kultur = new Kultur('scharwbrachehw', 'Scharbrache im Herbst und Winter', 1.0);
-    this.kulturen.push(kultur);
-    kultur = new Kultur('keine', 'Keine', 1.0);
-    this.kulturen.push(kultur);
-
-    let bb = new Bodenbearbeitung('mulch30', 'über 30% Mulch', 1.0);
-    this.bodenbearbeitung.push(bb);
-    bb = new Bodenbearbeitung('pflug', 'Pflug', 1.0);
-    this.bodenbearbeitung.push(bb);
-    bb = new Bodenbearbeitung('direksaat', 'Direksaat', 1.0);
-    this.bodenbearbeitung.push(bb);
+    this.kulturService.findAll().subscribe(
+        (kt) => {this.kulturen = kt; }
+    );
+    this.bodenbearbeitungService.findAll().subscribe(
+        (bb) => { this.bodenbearbeitung = bb; }
+    );
   }
 
   segmentChanged(event) {
-    console.log(event);
     this.currentSegment = event.detail.value;
   }
 }

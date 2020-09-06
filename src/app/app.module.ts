@@ -18,6 +18,8 @@ import {GeoApiService} from './services/geoapi/geo-api.service';
 import {LawisService} from './services/lawis/lawis.service';
 import {SettingsService} from './services/settings/settings.service';
 import {MathService} from './services/math/math.service';
+import {BodenbearbeitungService} from './services/bodenbearbeitung/bodenbearbeitung.service';
+import {KulturService} from './services/kultur/kultur.service';
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -47,6 +49,8 @@ export function createTranslateLoader(http: HttpClient) {
       LawisService,
       SettingsService,
       MathService,
+      BodenbearbeitungService,
+      KulturService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
