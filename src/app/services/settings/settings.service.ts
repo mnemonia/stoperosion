@@ -18,10 +18,10 @@ export class SettingsService {
 
   constructor() {
     const bwe = new Bewirtschaftungseinheit();
-    bwe.BTR_NR = 'LU3636';
+    bwe.BTR_NR = atob("TFUzNjM2");
     bwe.nutzungsflaechen = [];
     const nf = new Nutzungsflaeche();
-    let kultur = new Kultur('mais', 'Maïs (Silomais)', 1.0);
+    let kultur = new Kultur('mais', 'Mais (Silomais)', 1.0);
     let kulturProJahr = new KulturProJahr(kultur, 1);
     nf.kultur_pro_jahr.push(kulturProJahr);
     let bb = new Bodenbearbeitung('mulch30', 'über 30% Mulch', 1.0);
@@ -160,7 +160,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.244.0",
@@ -240,7 +240,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.247.0",
@@ -452,7 +452,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.267.0",
@@ -624,7 +624,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.348.0",
@@ -724,7 +724,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.356.0",
@@ -908,7 +908,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.369.2",
@@ -1000,7 +1000,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.460.0",
@@ -1180,7 +1180,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.92.0",
@@ -1344,7 +1344,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "424.714.0",
@@ -1732,7 +1732,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "424.716.0",
@@ -1976,7 +1976,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "424.737.0",
@@ -2172,7 +2172,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "424.740.0",
@@ -2324,7 +2324,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.333.0",
@@ -2480,7 +2480,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.333.1",
@@ -2770,7 +2770,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.336.1",
@@ -2930,7 +2930,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.338.0",
@@ -3066,7 +3066,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.345.0",
@@ -3194,7 +3194,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.355.0",
@@ -3346,7 +3346,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.454.0",
@@ -3608,7 +3608,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "402.87.1",
@@ -3696,7 +3696,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "424.404.0",
@@ -3768,7 +3768,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "AG4135.236.0",
@@ -3968,7 +3968,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "AG4135.255.1",
@@ -4036,7 +4036,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "AG4135.254.0",
@@ -4128,7 +4128,7 @@ export class SettingsService {
             "zone_ausland": null,
             "produktion": true,
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "area": null,
             "length": null,
             "display1": "AG4135.265.0",
@@ -4271,7 +4271,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694834,
             "BWE_ID": 19578,
             "Nutzungsidentifikator": "LU_1694834",
@@ -4523,7 +4523,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 608917,
             "BWE_ID": 19527,
             "Nutzungsidentifikator": "LU_608917",
@@ -4611,7 +4611,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1108399,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1108399",
@@ -5107,7 +5107,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694832,
             "BWE_ID": 772633,
             "Nutzungsidentifikator": "LU_1694832",
@@ -5243,7 +5243,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907281,
             "BWE_ID": 848336,
             "Nutzungsidentifikator": "LU_1907281",
@@ -5323,7 +5323,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907311,
             "BWE_ID": 848336,
             "Nutzungsidentifikator": "LU_1907311",
@@ -5431,7 +5431,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694851,
             "BWE_ID": 772634,
             "Nutzungsidentifikator": "LU_1694851",
@@ -5503,7 +5503,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1125900,
             "BWE_ID": 546077,
             "Nutzungsidentifikator": "LU_1125900",
@@ -5667,7 +5667,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694847,
             "BWE_ID": 772625,
             "Nutzungsidentifikator": "LU_1694847",
@@ -5779,7 +5779,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694839,
             "BWE_ID": 772627,
             "Nutzungsidentifikator": "LU_1694839",
@@ -5975,7 +5975,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698766,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1698766",
@@ -6075,7 +6075,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907063,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1907063",
@@ -6187,7 +6187,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694844,
             "BWE_ID": 19587,
             "Nutzungsidentifikator": "LU_1694844",
@@ -6371,7 +6371,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694855,
             "BWE_ID": 49900,
             "Nutzungsidentifikator": "LU_1694855",
@@ -6575,7 +6575,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694813,
             "BWE_ID": 19527,
             "Nutzungsidentifikator": "LU_1694813",
@@ -6695,7 +6695,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694849,
             "BWE_ID": 19657,
             "Nutzungsidentifikator": "LU_1694849",
@@ -6911,7 +6911,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694856,
             "BWE_ID": 49920,
             "Nutzungsidentifikator": "LU_1694856",
@@ -7259,7 +7259,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698767,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1698767",
@@ -7419,7 +7419,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694821,
             "BWE_ID": 772630,
             "Nutzungsidentifikator": "LU_1694821",
@@ -7523,7 +7523,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698756,
             "BWE_ID": 772631,
             "Nutzungsidentifikator": "LU_1698756",
@@ -7643,7 +7643,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698759,
             "BWE_ID": 772631,
             "Nutzungsidentifikator": "LU_1698759",
@@ -7815,7 +7815,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698760,
             "BWE_ID": 772632,
             "Nutzungsidentifikator": "LU_1698760",
@@ -8051,7 +8051,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694279,
             "BWE_ID": 772632,
             "Nutzungsidentifikator": "LU_1694279",
@@ -8127,7 +8127,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694276,
             "BWE_ID": 772631,
             "Nutzungsidentifikator": "LU_1694276",
@@ -8219,7 +8219,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694277,
             "BWE_ID": 772631,
             "Nutzungsidentifikator": "LU_1694277",
@@ -8311,7 +8311,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694273,
             "BWE_ID": 772630,
             "Nutzungsidentifikator": "LU_1694273",
@@ -8399,7 +8399,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 220534,
             "BWE_ID": 49918,
             "Nutzungsidentifikator": "LU_220534",
@@ -8555,7 +8555,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694286,
             "BWE_ID": 772634,
             "Nutzungsidentifikator": "LU_1694286",
@@ -8687,7 +8687,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694361,
             "BWE_ID": 772644,
             "Nutzungsidentifikator": "LU_1694361",
@@ -9043,7 +9043,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694283,
             "BWE_ID": 772633,
             "Nutzungsidentifikator": "LU_1694283",
@@ -9179,7 +9179,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 220532,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_220532",
@@ -9355,7 +9355,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1125592,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1125592",
@@ -9643,7 +9643,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1125594,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1125594",
@@ -9767,7 +9767,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907099,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1907099",
@@ -9851,7 +9851,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907127,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_1907127",
@@ -9947,7 +9947,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1108640,
             "BWE_ID": 49920,
             "Nutzungsidentifikator": "LU_1108640",
@@ -10015,7 +10015,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 278345,
             "BWE_ID": 49900,
             "Nutzungsidentifikator": "LU_278345",
@@ -10259,7 +10259,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1108558,
             "BWE_ID": 19527,
             "Nutzungsidentifikator": "LU_1108558",
@@ -10383,7 +10383,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 13543,
             "BWE_ID": 19520,
             "Nutzungsidentifikator": "LU_13543",
@@ -10467,7 +10467,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 13545,
             "BWE_ID": 19521,
             "Nutzungsidentifikator": "LU_13545",
@@ -10583,7 +10583,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698753,
             "BWE_ID": 19527,
             "Nutzungsidentifikator": "LU_1698753",
@@ -10675,7 +10675,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698764,
             "BWE_ID": 19657,
             "Nutzungsidentifikator": "LU_1698764",
@@ -10743,7 +10743,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698765,
             "BWE_ID": 19657,
             "Nutzungsidentifikator": "LU_1698765",
@@ -10843,7 +10843,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698762,
             "BWE_ID": 19578,
             "Nutzungsidentifikator": "LU_1698762",
@@ -10931,7 +10931,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698763,
             "BWE_ID": 19578,
             "Nutzungsidentifikator": "LU_1698763",
@@ -11321,7 +11321,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 161372,
             "BWE_ID": 19596,
             "Nutzungsidentifikator": "LU_161372",
@@ -11579,7 +11579,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 91782,
             "BWE_ID": 54608,
             "Nutzungsidentifikator": "LU_91782",
@@ -11687,7 +11687,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907284,
             "BWE_ID": 848336,
             "Nutzungsidentifikator": "LU_1907284",
@@ -11763,7 +11763,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1907313,
             "BWE_ID": 848336,
             "Nutzungsidentifikator": "LU_1907313",
@@ -11999,7 +11999,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 80606,
             "BWE_ID": 19732,
             "Nutzungsidentifikator": "LU_80606",
@@ -12079,7 +12079,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1125899,
             "BWE_ID": 546079,
             "Nutzungsidentifikator": "LU_1125899",
@@ -12179,7 +12179,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1125901,
             "BWE_ID": 546080,
             "Nutzungsidentifikator": "LU_1125901",
@@ -12337,7 +12337,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1698761,
             "BWE_ID": 772632,
             "Nutzungsidentifikator": "LU_1698761",
@@ -12376,7 +12376,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694280,
             "BWE_ID": 772632,
             "Nutzungsidentifikator": "LU_1694280",
@@ -12415,7 +12415,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694284,
             "BWE_ID": 772633,
             "Nutzungsidentifikator": "LU_1694284",
@@ -12454,7 +12454,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 99105,
             "BWE_ID": 54608,
             "Nutzungsidentifikator": "LU_99105",
@@ -12493,7 +12493,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 161371,
             "BWE_ID": 19596,
             "Nutzungsidentifikator": "LU_161371",
@@ -12532,7 +12532,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 220530,
             "BWE_ID": 49901,
             "Nutzungsidentifikator": "LU_220530",
@@ -12571,7 +12571,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 99113,
             "BWE_ID": 19578,
             "Nutzungsidentifikator": "LU_99113",
@@ -12610,7 +12610,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 99107,
             "BWE_ID": 19521,
             "Nutzungsidentifikator": "LU_99107",
@@ -12649,7 +12649,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 30992,
             "BWE_ID": 19520,
             "Nutzungsidentifikator": "LU_30992",
@@ -12688,7 +12688,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 99117,
             "BWE_ID": 19657,
             "Nutzungsidentifikator": "LU_99117",
@@ -12727,7 +12727,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1694285,
             "BWE_ID": 772633,
             "Nutzungsidentifikator": "LU_1694285",
@@ -12766,7 +12766,7 @@ export class SettingsService {
           "geometry_name": "KUL_GEOM",
           "properties": {
             "BTR_ID": 11050,
-            "BTR_NR": "LU3636",
+            "BTR_NR": atob("TFUzNjM2"),
             "KUL_ID": 1108638,
             "BWE_ID": 49918,
             "Nutzungsidentifikator": "LU_1108638",
