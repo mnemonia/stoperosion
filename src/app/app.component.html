@@ -4,8 +4,10 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Stop Erosion</ion-list-header>
-          <ion-note>miggi.tschudi@bauer.ch</ion-note>
-
+          <ion-item>
+            <ion-icon sot="start" name="person-outline"></ion-icon>
+            <ion-note>{{settingsService.getUser().username}}</ion-note>
+          </ion-item>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>

@@ -14,7 +14,6 @@ export class MapPage implements OnInit {
   public mapData = {};
   public mapCenter = [2649846.329, 1229746.222];
   public mapEvent;
-  public btrNr = 'LU3636';
   public area = 'be';
   public bewirtschaftungsflaechen_area: any = {};
   public nutzungsflaechen_area: any = {};
@@ -39,8 +38,8 @@ export class MapPage implements OnInit {
                 this.bewirtschaftungsflaechen_area = bwe.bewirtschaftungsflaechen_area;
                 this.nutzungsflaechen_area = bwe.nutzungsflaechen_area;
                 this.nutzungsflaechen_area.features.forEach(feature => {
-                  const center = this.mathService.calculateCenterCoordinate(feature);
-                  console.warn('center', center);
+                  //  const center = this.mathService.calculateCenterCoordinate(feature);
+                  // console.warn('center', center);
                 });
               }
           );

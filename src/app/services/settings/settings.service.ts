@@ -12813,9 +12813,9 @@ export class SettingsService {
 
   public getUser(): User {
     const user = new User();
-    user.user_id = 'mts';
-    user.username = 'Miggi Tschudi';
-    user.BTR_NR = 'LU3636';
+    user.user_id = atob('bWlnZ2kudHNjaHVkaUBiYXVlci5jaA==');
+    user.username = atob('TWlnZ2kgVHNjaHVkaQ==');
+    user.BTR_NR = atob('TFUzNjM2');
     return user;
   }
 

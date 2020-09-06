@@ -10,7 +10,6 @@ import {SettingsService} from '../services/settings/settings.service';
 export class BewirtschaftungPage implements OnInit {
   currentSegment = 'y1';
   nutzungsflaechen: Nutzungsflaeche[] = [];
-  jahre = {};
   kulturen: Kultur[] = [];
   bodenbearbeitung: Bodenbearbeitung[] = [];
 
@@ -21,11 +20,11 @@ export class BewirtschaftungPage implements OnInit {
         (bwes) => {
           bwes.forEach(bwe => {
             bwe.nutzungsflaechen.forEach(nf => {
-              console.log(nf);
+              this.nutzungsflaechen.push(nf);
             });
           });
         },
-        (err) => {},
+        (err) => console.error(err),
         () => {}
     );
     let kultur = new Kultur('mais', 'Mais (Silomais)', 1.0);
